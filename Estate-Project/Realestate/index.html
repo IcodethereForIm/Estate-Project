@@ -1,0 +1,24 @@
+<title>Estate for sale</title>
+<link rel="stylesheet" href="stye.css">
+<body>
+    <a href="signin.html" class="sign-in">Sign In</a>
+    <section class="Container" id="container"></section>
+
+    <h2>Leave a Review</h2>
+
+<form id="review-form">
+  <input type="text" id="review-name" placeholder="Your name" required>
+  <textarea id="review-text" placeholder="Your review" required></textarea>
+  <button type="submit">Submit Review</button>
+</form>
+
+
+<button id="toggle-reviews">Show Reviews</button>
+<section id="reviews-section" style="display: none;">
+  <h2>Reviews</h2>
+  <div id="review-box"></div>
+</section>
+
+    <script src="index.js" type="module"></script>
+    <script src="review.js"></script>
+</body>

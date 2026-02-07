@@ -1,0 +1,13 @@
+{
+  "name": "realestate",
+  "version": "1.0.0",
+  "description": "A renting plartforme house)",
+  "license": "ISC",
+  "author": "Tony Stark",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    
+    "start": "node server.js"
+  }
+}
