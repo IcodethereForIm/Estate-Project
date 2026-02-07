@@ -1,5 +1,5 @@
 # Estate-Project
-A simple Node.js + Vanilla JavaScript project that serves a static website and allows users to add and view reviews using a custom REST API (no frameworks).
+A simple Node.js + Vanilla JavaScript project that serves a static website and implements a custom REST API without any frameworks.
 
 🚀 Features
 
@@ -29,22 +29,47 @@ Data Storage: JSON file (no database)
 🗂 Project Structure
 
 
-Project/
+Estate-Project/
 │
-├── BackEnd/ → Backend (Node.js HTTP server & API logic)
-│ ├── server.js → Main server file
-│ └── utils/ → Controllers, static server, helpers
+├── server.js               → Main Node.js HTTP server
+├── review.json             → Stores user reviews
 │
-└── Realestate/ → Frontend (HTML, CSS, JS)
-├── index.html → Main UI
-├── review.js → Handles review form & fetch logic
-└── styles.css
+├── utils/
+│   ├── controllers/        → API controllers
+│   │   ├── getReview.js
+│   │   ├── postReview.js
+│   │   └── reviewController.js
+│   │
+│   ├── getContType.js      → Determines Content-Type for static files
+│   ├── sendRes.js          → Sends HTTP responses
+│   └── staticServer.js     → Serves frontend files
+│
+└── Realestate/
+    └── properties/         → Frontend Client Application
+        ├── index.html       → Home page
+        ├── index.js         → Main frontend logic
+        ├── default.js       → Shared UI logic
+        ├── signin.html      → Sign-in page
+        ├── signin.js        → Sign-in logic
+        ├── review.js        → Review form & fetch logic
+        └── styles.css       → Global styles
+
+📌 Architecture Notes
+
+- Backend logic is written using pure Node.js (no Express).
+- All API-related logic is organized inside `utils/controllers/`.
+- Static file handling and response utilities live directly inside `utils/`.
+- Frontend files are located inside `Realestate/properties/`, which acts as the client-side application.
+- Folder names are custom but clearly documented to explain their purpose.
+
 
 ▶️ How to Run the Project
-1️⃣ Clone the repository
-git clone https://github.com/your-username/real-estate-reviews.git
 
-cd real-estate-reviews
+1️⃣ Clone the repository
+git clone https://github.com/IcodethereForIm/Estate-Project.git
+
+cd Estate-Project
+
 
 2️⃣ Start the server
 node BackEnd/server.js
@@ -118,5 +143,5 @@ Improve UI animations
 Deploy to Render / Railway / Vercel
 
 👤 Author
-
-GitHub: https://github.com/your-username
+Souvik Ghosh
+GitHub: https://github.com/IcodethereForIm
